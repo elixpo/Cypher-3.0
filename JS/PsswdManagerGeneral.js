@@ -111,7 +111,6 @@ function RegisterError(errorRegister)
     typeWriterErrorHTML("ErrorReg", errorRegister);
 
 }
-
 function ForgotPasswordError(errorForgotPassword)
 {
     typeWriterErrorHTML("ErrorForgetPassword", errorForgotPassword);

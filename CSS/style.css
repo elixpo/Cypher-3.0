@@ -177,7 +177,7 @@
     .category_div
     {
         position: absolute;
-        top: 26%;
+        top: 24%;
         background: transparent;
         height: 80px;
         width: 90%;
@@ -368,7 +368,7 @@
     .rtn-text
     {
         position: absolute;
-        top: 35%;
+        top: 32%;
         margin-left: 5px;
         color: #ffc;
         font-size: 19px;
