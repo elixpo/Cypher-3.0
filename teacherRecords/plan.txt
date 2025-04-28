@@ -38,5 +38,9 @@ the details of all the registered TEACHERS and ADMINS and STUDENTS will be made 
 
 
 
-RegisterWithGitHub.js:68 Error during signInWithPopup: An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.
-add on snapshot for the passwords being added
+
+
+
+1. we dont have a way to avoid the collision of the classes
+2. we dont have a way to avoid the collision of the room numbers
+3. we are yet to sanitize the details like which day, which time of the week for the class to start

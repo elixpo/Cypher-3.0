@@ -8,7 +8,7 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 # --- Hardcoded Class and Teacher Info ---
-HARDCODED_CLASS_ID = "CS501"
+HARDCODED_CLASS_ID = "CS301"
 HARDCODED_TEACHER_ID = "T001"
 
 def get_student_name(student_id):
