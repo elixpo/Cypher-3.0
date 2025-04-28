@@ -34,7 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             if (!querySnapshot.empty) {
                 const userDoc = querySnapshot.docs[0]; // Get the first matching document
                 userData = userDoc.data();
-                userRole = collection.toLowerCase(); // Set the role based on the collection name
+                userRole = userDoc.data().role; // Set the role based on the collection name
                 break; // Stop the loop once the user is found
             }
         }
@@ -53,9 +53,10 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
             // Redirect based on user role
             if (userRole === 'admins') {
-                redirectTo('admin');
-            } else if (userRole === 'teachers') {
-                redirectTo('teacher');
+                redirectTo('teacherRecords/admin');
+            } else if (userRole === 'teacher') {
+                redirectTo('teacherRecords/teacher');
+                localStorage.setItem('teacherID', userData.id);
             } 
             
             else {

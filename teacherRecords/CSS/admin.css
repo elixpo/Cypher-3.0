@@ -1,76 +1,230 @@
-/* Basic styles for the admin page */
+/* admin.css */
+
+/* Basic body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f7f6;
+    color: #333;
 }
 
+/* Header styling */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header .welcome {
-    font-size: 1.2em;
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
 }
 
-header button {
-    padding: 10px;
-    background-color: #ff5733;
-    border: none;
+.welcome {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between H1 and button */
+}
+
+#logoutBtn {
+    background-color: #d9534f;
     color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
-header button:hover {
-    background-color: #c7402f;
+#logoutBtn:hover {
+    background-color: #c9302c;
 }
 
+/* Table Section Styling */
+/* This section container styling remains the same and is reused */
 .table-section {
+    margin: 20px;
+    background-color: #fff;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Add horizontal scroll for small screens if table is wide */
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.table-section h2 {
+    margin-top: 0;
+    color: #0056b3;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-table {
+/* --- START: Table Styling - Made more generic --- */
+/* Applies to any table within a .table-section */
+.table-section table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Removes space between borders */
+    min-width: 600px; /* Ensure table has a minimum width to prevent squishing on small screens if needed */
+}
+
+.table-section th,
+.table-section td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-section th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #555;
+}
+
+.table-section tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping */
+}
+
+.table-section tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+/* Styling for the 'loading' or 'no data' row */
+.table-section tbody tr td[colspan] {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+/* --- END: Table Styling --- */
+
+
+/* Action Buttons Styling (These are specific to the admin table's context,
+   but kept here if you add buttons to teacher table later) */
+/* Note: The teacher table HTML doesn't have these buttons */
+.edit-btn, .delete-btn, .schedule-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #4cae4c;
+}
+
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+.schedule-btn {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.schedule-btn:hover {
+    background-color: #ec971f;
+}
+
+/* Modal Styling (These are specific to admin modal, kept here) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px; /* Location of the box */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Max width for larger screens */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Needed for absolute positioning of close button */
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #0056b3;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
-table th, table td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-table th {
-    background-color: #333;
-    color: white;
-}
-
-button.edit-btn {
-    background-color: #ff9800;
-    border: none;
-    padding: 5px 10px;
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right; /* Or use absolute positioning */
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
     cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Modal Form Styling */
+.modal-content form label {
+    display: block; /* Labels on their own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-content form input[type="text"],
+.modal-content form input[type="time"],
+.modal-content form input[type="number"] {
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-size: 1em;
+}
+
+.modal-content form button[type="submit"] {
+    background-color: #007bff;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
-button.edit-btn:hover {
-    background-color: #e6891a;
-}
-
-button.edit-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+.modal-content form button[type="submit"]:hover {
+    background-color: #0056b3;
 }

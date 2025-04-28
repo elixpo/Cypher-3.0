@@ -1,4 +1,5 @@
 
+//   const db = firebase.firestore();
 
 db.collection("users").doc(localStorage.getItem("CurUsername").toLowerCase()).onSnapshot((doc) => {
     document.getElementById("profileName").value = doc.data().displayName;

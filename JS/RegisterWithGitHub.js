@@ -69,10 +69,12 @@ document.getElementById("signin_with_github").addEventListener("click", () => {
         if(err.message == "An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.")
         {
             RegisterError("Email Associated with Different Account/Service");
+            LoginError("Email Associated with Different Account/Service");
         }
         else 
         {
             RegisterError("Some Error Occured!");
+            LoginError("Email Associated with Different Account/Service");
         }
     });
 });

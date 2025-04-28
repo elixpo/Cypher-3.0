@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <!-- Reuse the admin CSS for consistent styling -->
+    <link rel="stylesheet" href="../CSS/admin.css">
+    <style>
+        /* Optional: Add any teacher-specific styles or overrides here */
+        /* Make the Class ID cells clickable */
+        #classesTable tbody td:nth-child(2) { /* Targeting the 2nd column (Class ID) */
+            cursor: pointer;
+            color: #007bff; /* Standard link color */
+            text-decoration: underline;
+        }
+
+        #classesTable tbody td:nth-child(2):hover {
+             color: #0056b3;
+             text-decoration: none;
+        }
+
+        /* Style for the "No data" row */
+        #classesTable tbody tr td[colspan] {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+        }
+
+         /* Style for action buttons - reuse admin styles */
+        #classesTable .delete-btn {
+             /* Inherits from admin.css */
+             margin-right: 0; /* No margin if only one button */
+        }
+
+        /* Style for the Details Modal content */
+        #classDetailsContent p {
+            margin-bottom: 8px; /* Slightly less space */
+            line-height: 1.5;
+        }
+        #classDetailsContent strong {
+            display: inline-block;
+            min-width: 120px; /* Increase width for better alignment */
+            margin-right: 5px;
+        }
+
+        /* Styles for the Attendance section */
+        .attendance-section {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .attendance-section h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #0056b3;
+        }
+
+        #attendanceList {
+            list-style: none;
+            padding: 0;
+            max-height: 200px; /* Limit height and add scroll */
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #attendanceList li {
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #attendanceList li:last-child {
+            border-bottom: none;
+        }
+
+         #attendanceList li:nth-child(even) {
+             background-color: #f9f9f9;
+         }
+
+
+        .add-attendance-form {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+
+        .add-attendance-form label {
+             display: inline-block; /* Display labels inline */
+             margin-bottom: 5px;
+             font-weight: bold;
+             width: 80px; /* Fixed width for labels */
+             margin-right: 5px;
+        }
+
+        .add-attendance-form input[type="text"] {
+            width: calc(100% - 100px); /* Adjust width based on label width */
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 0.9em;
+             display: inline-block; /* Display inputs inline */
+        }
+         .add-attendance-form input[type="text"]:last-of-type {
+              margin-bottom: 0; /* No bottom margin on last input before button */
+         }
+
+
+        .add-attendance-form button {
+            background-color: #28a745; /* Green color for add */
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            display: block; /* Button on its own line */
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .add-attendance-form button:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="welcome">
+            <!-- Teacher name/ID will be populated here by teacher.js -->
+            <h1 id="welcomeMessage">Welcome, Teacher</h1>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </header>
+
+    <!-- Classes Table Section -->
+    <div class="table-section">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+             <h2>Your Classes</h2>
+             <button id="scheduleClassBtn" class="schedule-btn">Schedule New Class</button>
+        </div>
+
+        <table id="classesTable">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Class ID</th>
+                    <th>Course</th>
+                    <th>Department</th>
+                    <th>Time</th>
+                    <th>Room No</th>
+                    <th>Week No</th>
+                    <th>Action</th> <!-- Added Action column -->
+                    <!-- Add more columns if needed based on class data -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Class data will be dynamically populated by teacher.js -->
+                 <tr>
+                    <td colspan="8" style="text-align: center;">Loading classes...</td> <!-- Update colspan -->
+                 </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Schedule Class Modal (Copied/Adapted from Admin) -->
+    <div id="scheduleClassModal" class="modal">
+        <div class="modal-content">
+            <span id="closeScheduleModal" class="close">×</span>
+            <h2>Schedule New Class</h2>
+            <form id="scheduleClassForm">
+                <!-- Fields from the admin schedule form -->
+                <label for="classID">Class ID:</label>
+                <input type="text" id="classID" name="classID" required><br><br>
+
+                 <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required><br><br>
+
+                <label for="courseName">Course Name:</label>
+                <input type="text" id="courseName" name="courseName" required><br><br>
+
+                <!-- <label for="classNo">Class Number:</label>
+                <input type="number" id="classNo" name="classNo" value="0" min="0" required><br><br> -->
+
+                 <label for="timeStart">Start Time:</label>
+                <input type="time" id="timeStart" name="timeStart" required><br><br>
+
+                <label for="timeEnd">End Time:</label>
+                <input type="time" id="timeEnd" name="timeEnd" required><br><br>
+
+                 <label for="duration">Duration (e.g., "2h"):</label>
+                 <input type="text" id="duration" name="duration" required><br><br>
+
+                <label for="roomNo">Room No:</label>
+                <input type="text" id="roomNo" name="roomNo" required><br><br>
+
+                <label for="weekNo">Week No:</label>
+                <input type="number" id="weekNo" name="weekNo" required><br><br>
+
+                <button type="submit">Schedule Class</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Class Details Modal (Enhanced for Attendance) -->
+     <div id="classDetailsModal" class="modal">
+        <div class="modal-content">
+            <span id="closeDetailsModal" class="close">×</span>
+            <h2 id="detailsModalTitle">Class Details</h2>
+
+            <!-- Main Class Details -->
+            <div id="mainClassDetails">
+                 <p><strong>Subject:</strong> <span id="detailSubject"></span></p>
+                 <p><strong>Class ID:</strong> <span id="detailClassId"></span></p>
+                 <p><strong>Course:</strong> <span id="detailCourse"></span></p>
+                 <p><strong>Department:</strong> <span id="detailDept"></span></p>
+                 <p><strong>Time:</strong> <span id="detailTime"></span></p>
+                 <p><strong>Room No:</strong> <span id="detailRoom"></span></p>
+                 <p><strong>Week No:</strong> <span id="detailWeek"></span></p>
+                 <p><strong>Class No:</strong> <span id="detailClassNo"></span></p>
+                 <p><strong>Duration:</strong> <span id="detailDuration"></span></p>
+                 <p><strong>Is Holiday:</strong> <span id="detailIsHoliday"></span></p>
+                 <p><strong>Is Completed:</strong> <span id="detailIsCompleted"></span></p>
+                  <!-- Display teacher info from CLASS_DETAILS -->
+                 <p><strong>Taught by:</strong> <span id="detailTeacherName"></span> (<span id="detailTeacherId"></span>)</p>
+                 <p><strong>Total Students Attended:</strong> <span id="detailTotalAttendance"></span></p>
+            </div>
+
+            <!-- Attendance Section -->
+            <div class="attendance-section">
+                <h3>Attendance List</h3>
+                <ul id="attendanceList">
+                    <!-- Attendance list items will be populated here by JS -->
+                    <li>Loading attendance...</li>
+                </ul>
+
+                <!-- Add Attendance Form -->
+                <div class="add-attendance-form">
+                    <h4>Add Student Attendance</h4>
+                    <div>
+                        <label for="studentIdInput">Student ID:</label>
+                        <input type="text" id="studentIdInput" name="studentId" required>
+                    </div>
+                    <div>
+                        <label for="studentNameInput">Student Name:</label>
+                        <input type="text" id="studentNameInput" name="studentName" required>
+                    </div>
+                     <button id="addAttendanceBtn">Add Attendance</button>
+                </div>
+            </div>
+
+            <br>
+            <!-- Actions for the Class (not individual attendance) -->
+            <!-- Hidden input to store the index of the class being viewed/deleted -->
+             <input type="hidden" id="detailsClassIndex">
+            <button id="editClassDetailsBtn" class="edit-btn" style="display:none;">Edit Class</button> <!-- Keep hidden for now -->
+            <button id="deleteClassFromDetailsBtn" class="delete-btn">Delete Class</button>
+        </div>
+    </div>
+
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+     <!-- FieldValue is in firestore module, no need for separate lite import -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore-lite.js"></script> -->
+
+    <script src="../JS/linkRedirect.js"></script>
+    <script src="../JS/teacher.js"></script>
+</body>
+</html>

@@ -35,3 +35,8 @@ let's do uptil now
 you give me the firestore data structure and i'll create some already take classes  
 
 the details of all the registered TEACHERS and ADMINS and STUDENTS will be made in a seperate collections to detect login
+
+
+
+RegisterWithGitHub.js:68 Error during signInWithPopup: An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.
+add on snapshot for the passwords being added
