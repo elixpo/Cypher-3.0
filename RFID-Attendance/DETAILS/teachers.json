@@ -1,0 +1,100 @@
+{
+    "T001": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Computer Science"
+    },
+    "T002": {
+        "name": "Mary Jane",
+        "email": "mary@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Electronics"
+    },
+    "T003": {
+        "name": "Alice Smith",
+        "email": "alice@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Mathematics"
+    },
+    "T004": {
+        "name": "Bob Johnson",
+        "email": "bob@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Physics"
+        },
+    "T005": {
+        "name": "Charlie Brown",
+        "email": "charlie@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Computer Science"
+    },
+    "T006": {
+        "name": "Diana Prince",
+        "email": "diana@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Mathematics"
+    },
+    "T007": {
+        "name": "Ethan Hunt",
+        "email": "ethan@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Electronics"
+    },
+    "T008": {
+        "name": "Fiona Gallagher",
+        "email": "fiona@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Physics"
+    },
+    "T009": {
+        "name": "George Miller",
+        "email": "george@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Computer Science"
+    },
+        "T010": {
+        "name": "Hannah Montana",
+        "email": "hannah@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Mathematics"
+    },
+    "T011": {
+        "name": "Ian Wright",
+        "email": "ian@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Electronics"
+    },
+    "T012": {
+        "name": "Julia Roberts",
+        "email": "julia@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Physics"
+    },
+    "T013": {
+        "name": "Kevin Hart",
+        "email": "kevin@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Computer Science"
+    },
+    "T014": {
+        "name": "Laura Croft",
+        "email": "laura@example.com",
+        "passwordHash": "somehash",
+        "role": "teacher",
+        "department": "Mathematics"
+    }
+    }

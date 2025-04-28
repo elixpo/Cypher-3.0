@@ -1,0 +1,76 @@
+/* Basic styles for the admin page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .welcome {
+    font-size: 1.2em;
+}
+
+header button {
+    padding: 10px;
+    background-color: #ff5733;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+header button:hover {
+    background-color: #c7402f;
+}
+
+.table-section {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+button.edit-btn {
+    background-color: #ff9800;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+}
+
+button.edit-btn:hover {
+    background-color: #e6891a;
+}
+
+button.edit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

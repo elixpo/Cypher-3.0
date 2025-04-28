@@ -1,0 +1,56 @@
+{
+  "teachers": {
+    "T004": {
+      "week_no": 17,
+      "classes": [
+        {
+          "classid": "CS101",
+          "duration": "1h",
+          "class": "BTech CSE-2nd Year",
+          "subject": "Operating Systems",
+          "dept": "Computer Science",
+          "time_start": "09:00",
+          "time_end": "10:00",
+          "room_no": "C101",
+          "week_no": 17,
+          "if_holiday": false,
+          "class_no": 1,
+          "is_completed": false
+        },
+        {
+          "classid": "CS102",
+          "duration": "1h",
+          "class": "BTech CSE-3rd Year",
+          "subject": "Database Systems",
+          "dept": "Computer Science",
+          "time_start": "11:00",
+          "time_end": "12:00",
+          "room_no": "C102",
+          "week_no": 17,
+          "if_holiday": false,
+          "class_no": 2,
+          "is_completed": false
+        }
+      ]
+    },
+    "T001": {
+      "week_no": 17,
+      "classes": [
+        {
+          "classid": "CS201",
+          "duration": "2h",
+          "class": "BTech CSE-1st Year",
+          "subject": "Introduction to Programming",
+          "dept": "Computer Science",
+          "time_start": "10:00",
+          "time_end": "12:00",
+          "room_no": "C103",
+          "week_no": 17,
+          "if_holiday": false,
+          "class_no": 1,
+          "is_completed": false
+        }
+      ]
+    }
+  }
+}

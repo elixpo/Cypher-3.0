@@ -1,0 +1,21 @@
+{
+    "A001": {
+      "name": "Admin One",
+      "email": "admin.one@jis.edu",
+      "passwordHash": "adminhash1",
+      "role": "admin"
+    },
+    "A002": {
+      "name": "Admin Two",
+      "email": "admin.two@jis.edu",
+      "passwordHash": "adminhash2",
+      "role": "admin"
+    },
+    "A003": {
+      "name": "Admin Three",
+      "email": "admin.three@jis.edu",
+      "passwordHash": "adminhash3",
+      "role": "admin"
+    }
+  }
+  

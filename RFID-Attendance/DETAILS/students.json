@@ -1,0 +1,143 @@
+{
+    "S001": {
+      "name": "Alice Smith",
+      "email": "alice.smith@jis.edu",
+      "passwordHash": "studenthash1",
+      "department": "Computer Science",
+      "role": "student"
+    },
+    "S002": {
+      "name": "Bob Johnson",
+      "email": "bob.johnson@jis.edu",
+      "passwordHash": "studenthash2",
+      "department": "Computer Science",
+      "role": "student"
+    },
+    "S003": {
+      "name": "Charlie Brown",
+      "email": "charlie.brown@jis.edu",
+      "passwordHash": "studenthash3",
+      "department": "Computer Science",
+      "role": "student"
+    },
+    "S004": {
+      "name": "David Wilson",
+      "email": "david.wilson@jis.edu",
+      "passwordHash": "studenthash4",
+      "department": "Computer Science",
+      "role": "student"
+    },
+    "S005": {
+      "name": "Ella Davis",
+      "email": "ella.davis@jis.edu",
+      "passwordHash": "studenthash5",
+      "department": "Computer Science",
+      "role": "student"
+    },
+    "S006": {
+      "name": "Frank Moore",
+      "email": "frank.moore@jis.edu",
+      "passwordHash": "studenthash6",
+      "department": "Electronics",
+      "role": "student"
+    },
+    "S007": {
+      "name": "Grace Taylor",
+      "email": "grace.taylor@jis.edu",
+      "passwordHash": "studenthash7",
+      "department": "Electronics",
+      "role": "student"
+    },
+    "S008": {
+      "name": "Henry Anderson",
+      "email": "henry.anderson@jis.edu",
+      "passwordHash": "studenthash8",
+      "department": "Electronics",
+      "role": "student"
+    },
+    "S009": {
+      "name": "Ivy Thomas",
+      "email": "ivy.thomas@jis.edu",
+      "passwordHash": "studenthash9",
+      "department": "Electronics",
+      "role": "student"
+    },
+    "S010": {
+      "name": "Jack Lee",
+      "email": "jack.lee@jis.edu",
+      "passwordHash": "studenthash10",
+      "department": "Physics",
+      "role": "student"
+    },
+    "S011": {
+      "name": "Kathy Harris",
+      "email": "kathy.harris@jis.edu",
+      "passwordHash": "studenthash11",
+      "department": "Physics",
+      "role": "student"
+    },
+    "S012": {
+      "name": "Leo Martin",
+      "email": "leo.martin@jis.edu",
+      "passwordHash": "studenthash12",
+      "department": "Physics",
+      "role": "student"
+    },
+    "S013": {
+      "name": "Mia Clark",
+      "email": "mia.clark@jis.edu",
+      "passwordHash": "studenthash13",
+      "department": "Physics",
+      "role": "student"
+    },
+    "S014": {
+      "name": "Noah Lewis",
+      "email": "noah.lewis@jis.edu",
+      "passwordHash": "studenthash14",
+      "department": "Mathematics",
+      "role": "student"
+    },
+    "S015": {
+      "name": "Olivia Young",
+      "email": "olivia.young@jis.edu",
+      "passwordHash": "studenthash15",
+      "department": "Mathematics",
+      "role": "student"
+    },
+    "S016": {
+      "name": "Paul Walker",
+      "email": "paul.walker@jis.edu",
+      "passwordHash": "studenthash16",
+      "department": "Mathematics",
+      "role": "student"
+    },
+    "S017": {
+      "name": "Quinn Hall",
+      "email": "quinn.hall@jis.edu",
+      "passwordHash": "studenthash17",
+      "department": "Mechanical",
+      "role": "student"
+    },
+    "S018": {
+      "name": "Ruby Allen",
+      "email": "ruby.allen@jis.edu",
+      "passwordHash": "studenthash18",
+      "department": "Mechanical",
+      "role": "student"
+    },
+    "S019": {
+      "name": "Steve Wright",
+      "email": "steve.wright@jis.edu",
+      "passwordHash": "studenthash19",
+      "department": "Mechanical",
+      "role": "student"
+    },
+    "S020": {
+      "name": "Tina Scott",
+      "email": "tina.scott@jis.edu",
+      "passwordHash": "studenthash20",
+      "department": "Mechanical",
+      "role": "student"
+    }
+  }
+  

@@ -1,0 +1,37 @@
+1. a common login page, asking for JISID and password 
+ depending on what the user has entered  the JISID is looked up in the database and then realised if the login is a teacher 
+ login or student login or admin login
+
+2. if the login is done by a teacher then it takes to the teachers webpage and then the teachers details are shown, here's a 
+review of what the page would look like 
+
+common header
+welcoming the teacher text (big)
+date 
+session
+week day name
+a history button (clicking this will show the past classes which has already been taken)
+and a + icon which when clicked can be used to add an extra class in that week 
+(the system will auto detect if the class timings are clashing with the day the class is being settled)
+
+a tabular from of the class details of all the 5 days of the week 
+mon, tue, wed, thu, fri
+
+for each day the table would have these fields 
+LET'S DAY MONDAY
+CLASSID1 duration class subject dept time_end time_start room_no week_no if_holiday class_no is_completed
+CLASSID1 duration class subject dept time_end time_start room_no week_no if_holiday class_no is_completed
+LET'S DAY TUESDAY
+CLASSID1 duration class subject dept time_end time_start room_no week_no if_holiday class_no is_completed
+CLASSID1 duration class subject dept time_end time_start room_no week_no if_holiday class_no is_completed
+
+and so on...
+
+the details of the class will be in the firebase firestore database 
+the collection will be "CLASSES" and docs will be made for each JISID of teachers
+you can plan the further thing from here, howe the datastrcute will look like 
+let's do uptil now
+
+you give me the firestore data structure and i'll create some already take classes  
+
+the details of all the registered TEACHERS and ADMINS and STUDENTS will be made in a seperate collections to detect login
