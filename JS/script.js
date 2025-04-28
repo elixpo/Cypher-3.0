@@ -177,7 +177,7 @@ document.getElementById("CrossAllPwdDown").addEventListener("click", () => {
 
 function checkLocalStorage()
 {
-  (localStorage.getItem("CurUsername")) ? null : location.replace("s1.html");
+  (localStorage.getItem("CurUsername")) ? null : redirectTo("");
 }
 
 
@@ -974,7 +974,7 @@ document.getElementById("logoutBrn").addEventListener("click", () => {
 
 function logoutRedirect()
 {
-  location.replace("s1.html");
+  redirectTo("");
 }
 
 function viewDetails(self)

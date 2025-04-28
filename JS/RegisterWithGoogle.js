@@ -13,7 +13,7 @@ document.getElementById("signin_with_google_reg").addEventListener("click", () =
         docRef.get().then((doc) => { // gets the whole data against the entered email address
             if (doc.exists) {
                 localStorage.setItem("CurUsername", user.displayName);
-                window.location.replace("s2.html");
+                redirectTo("password/");
             } else {
                 document.getElementById("successLoaderContainer").classList.add("OpacityActive");
                 var TilesAnimationInterval = setInterval(() => {
@@ -52,7 +52,7 @@ document.getElementById("signin_with_google_reg").addEventListener("click", () =
                     }, 3300);
 
                     localStorage.setItem("CurUsername", user.displayName);
-                    window.location.replace("s2.html");
+                    redirectTo("password/");
                 }).catch((err) => {
                     console.error("Error adding document:", err);
                 });

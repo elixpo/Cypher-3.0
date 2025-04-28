@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Password Saver",
+  "version": "1.0",
+  "description": "A Chrome extension that prompts users to save passwords in a database when they fill out a password field.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/html/popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

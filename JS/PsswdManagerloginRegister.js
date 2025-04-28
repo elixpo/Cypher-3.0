@@ -163,7 +163,7 @@ function authUser()
                     clearInterval(TilesAnimationInterval);
                   }, 3300);
                   localStorage.setItem("CurUsername", userNameLogin);
-                window.location.replace("s2.html");
+                redirectTo("password/");
             }
             else
             {

@@ -61,5 +61,6 @@ document.getElementById("submitEntryCardLogout").addEventListener("click", () =>
 })
 
 document.getElementById("reEnter").addEventListener("click", () => {
-    location.replace("s2.html");
+    // location.replace("s2.html");
+    redirectTo("password/");
 })
