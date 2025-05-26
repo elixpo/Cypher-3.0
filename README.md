@@ -38,30 +38,30 @@ Happy exploring! 🚀🔐
 
 ## Features
 
-### For Teachers:
-- **Attendance Management**: Teachers can scan student IDs to take attendance and save it securely in the database.
-- **Class Scheduling**: Teachers can schedule classes, view details, and manage attendance records.
-- **Authentication**: Teachers can log in using their credentials, with role-based access control.
+### Teacher Module
+- **Attendance Management**: Teachers can scan student IDs and record attendance using the `scanning.py` script.
+- **Class Scheduling**: Teachers can schedule classes and manage details via the `teacher.js` module.
+- **Authentication**: Teachers are authenticated using Firebase Authentication and role-based access control.
 
-### For Admins:
-- **Teacher Management**: Admins can add, edit, and delete teacher records.
-- **Class Scheduling**: Admins can schedule classes for teachers and manage class details.
-- **Role-Based Access**: Admins have exclusive access to manage the platform.
+### Admin Module
+- **Admin Management**: Admins can upload and manage teacher/admin data using the `upload_admins.js` script.
+- **Teacher Management**: Admins can edit, delete, and schedule classes for teachers via the `admin.js` module.
+- **Role-Based Access**: Admins are restricted to specific functionalities based on their role.
 
 ---
 
 ## About Safe Cypher
 
-Safe Cypher is an experimental web application that focuses on Full Stack Development. It offers a secure platform for users to store and manage their passwords and other sensitive data. The application utilizes AES encryption for data security and Caesar cipher for experimental purposes. Users can sign up using Google or Github credentials and access various features like adding passwords, login info from various services, and saving them securely on the backend server. The application also allows users to log out when needed, ensuring their data's safety.
+Safe Cypher is an experimental web application that focuses on Full Stack Development. It offers a secure platform for users to store and manage their passwords and other sensitive data. The application utilizes AES encryption for data security and Caesar cipher for experimental purposes. Users can sign up using Google or Github credentials and access various features like adding passwords, login info from various services, and saving them securely on the backend server. The application also allows users to logout when needed, ensuring their data's safety.
 
 ---
 
 ## How It Works
 
-1. **Authentication**: Users can log in using Firebase Authentication.
+1. **Authentication**: Users are authenticated using Firebase Authentication.
 2. **Data Storage**: Sensitive data is stored securely in Firebase Firestore.
 3. **Encryption**: Data is encrypted using AES before being stored.
-4. **Role-Based Access**: Teachers and Admins have distinct roles and access levels.
+4. **Role-Based Access**: Teachers and admins have specific roles and permissions.
 
 ---
 
@@ -71,23 +71,22 @@ Safe Cypher is an experimental web application that focuses on Full Stack Develo
    ```bash
    git clone https://github.com/Circuit-Overtime/Cypher-3.0.git
    ```
-2. Install dependencies:  
+2. Install dependencies for backend scripts:
    ```bash
    npm install
    ```
-3. Set up Firebase credentials in the respective files:
-   - `serviceAccountKey.json` for backend scripts.
-   - Firebase configuration in frontend JavaScript files.
+3. Set up Firebase credentials:
+   - Add your Firebase configuration in the respective files (`scanning.py`, `teacher.js`, `admin.js`, `upload_admins.js`).
+   - Ensure the `serviceAccountKey.json` file is correctly placed for Firebase Admin SDK.
 
-4. Run the application:  
-   ```bash
-   npm start
-   ```
+4. Run the application:
+   - For backend scripts, execute them using Node.js or Python as required.
+   - For the frontend, open `index.html` in your browser.
 
 ---
 
 ## Feedback and Contributions
 
-We welcome contributions to improve Safe Cypher! Feel free to open issues or submit pull requests on our [GitHub repository](https://github.com/Circuit-Overtime/Cypher-3.0).
+We welcome contributions to improve Safe Cypher! Feel free to fork the repository, make changes, and submit a pull request. For any issues, please open a ticket in the [Issues](https://github.com/Circuit-Overtime/Cypher-3.0/issues) section.
 
-Happy coding! 🚀🔐
+Thank you for being a part of the Safe Cypher journey!
