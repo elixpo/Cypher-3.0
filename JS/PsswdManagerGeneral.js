@@ -1,13 +1,13 @@
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDWkgzZeTcQOGgDFC6UFs0LUA72KHtOG_4",
+    apiKey: "AIzaSyCnrTCutXWaIeBK8He0T9QDBwiWtE5Pick",
     authDomain: "psswdmanager-68a29.firebaseapp.com",
+    databaseURL: "https://psswdmanager-68a29-default-rtdb.firebaseio.com",
     projectId: "psswdmanager-68a29",
     storageBucket: "psswdmanager-68a29.appspot.com",
     messagingSenderId: "18800570825",
-    appId: "1:18800570825:web:5e8580cb73e6c3b155f818"
+    appId: "1:18800570825:web:5b6a3799e22a6f5d55f818"
   };
-
   // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   
