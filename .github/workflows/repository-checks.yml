@@ -38,7 +38,7 @@ jobs:
         shell: bash
         run: |
           required=(
-            "index.html"
+            "../index.html"
             "login/index.html"
             "admin/index.html"
             "JS/login.js"
