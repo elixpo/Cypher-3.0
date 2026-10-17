@@ -1,92 +1,92 @@
-# Safe Cypher: An Experimental Web Application for Full Stack Development
+# Cypher
 
-Welcome to Safe Cypher! This web application is designed to delve into the intricacies of Full Stack Development. Its primary purpose is to securely store and manage passwords while offering additional data handling features.
+Cypher is an incubating core Elixpo application for private information and
+account workflows. The current repository preserves the original Safe Cypher
+prototype while the project is prepared for its next stage of active
+development.
 
-To get started, create your account on Cypher by visiting [Cypher Sign-Up](https://cypherpi.vercel.app). You can register using your Google/Github credentials or opt for direct registration. Upon completion, a confirmation email will guide you to the homepage.
+The existing implementation explores Firebase-backed authentication, encrypted
+data storage, and role-based teacher and administrator workflows. It is
+development software: do not use it to store production secrets until a
+security review and supported release are published.
 
-Feel free to explore the platform! As an open-source project, your feedback is invaluable. Don't hesitate to report any issues, contributing to the continual improvement of Cypher.
+## Current status
 
-Happy exploring! 🚀🔐
+- **Elixpo relationship:** core project
+- **Lifecycle:** incubating
+- **Support:** best effort during development
+- **License:** MIT
+- **Canonical record:** <https://elixpo.com/projects/cypher>
 
----
+The historical demonstration may remain available at
+<https://cypherpi.vercel.app>, but availability does not imply a production
+service or security warranty.
 
-## Contributors
+## Technologies
 
-<a href="https://github.com/Circuit-Overtime/Cypher-3.0/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Circuit-Overtime/Cypher-3.0" />
-</a>
+- HTML, CSS, and JavaScript
+- Firebase Authentication, Firestore, and Storage
+- AES-based encryption experiments
+- Python and Node.js utilities
 
----
+## Prototype capabilities
 
-## Technologies Used
+### Personal information workflows
 
-### Frontend:
-- HTML
-- CSS
-- JavaScript
+- Sign-in through Firebase Authentication
+- Encrypted storage experiments for password and login records
+- Session and account-management interfaces
 
-### Backend:
-- Firebase Firestore
-- Firebase Authentication
-- Firebase Storage
+### Teacher workflows
 
-### Encryption:
-- AES (Advanced Encryption Standard)
-- Caesar Cipher (Experimental)
+- Attendance capture through `scanning.py`
+- Class scheduling through `teacher.js`
+- Role-based access through Firebase Authentication
 
----
+### Administrator workflows
 
-## Features
+- Teacher and administrator import through `upload_admins.js`
+- Teacher and class management through `admin.js`
+- Role-specific administrative controls
 
-### Teacher Module
-- **Attendance Management**: Teachers can scan student IDs and record attendance using the `scanning.py` script.
-- **Class Scheduling**: Teachers can schedule classes and manage details via the `teacher.js` module.
-- **Authentication**: Teachers are authenticated using Firebase Authentication and role-based access control.
+## Local development
 
-### Admin Module
-- **Admin Management**: Admins can upload and manage teacher/admin data using the `upload_admins.js` script.
-- **Teacher Management**: Admins can edit, delete, and schedule classes for teachers via the `admin.js` module.
-- **Role-Based Access**: Admins are restricted to specific functionalities based on their role.
+1. Clone the canonical repository:
 
----
-
-## About Safe Cypher
-
-Safe Cypher is an experimental web application that focuses on Full Stack Development. It offers a secure platform for users to store and manage their passwords and other sensitive data. The application utilizes AES encryption for data security and Caesar cipher for experimental purposes. Users can sign up using Google or Github credentials and access various features like adding passwords, login info from various services, and saving them securely on the backend server. The application also allows users to logout when needed, ensuring their data's safety.
-
----
-
-## How It Works
-
-1. **Authentication**: Users are authenticated using Firebase Authentication.
-2. **Data Storage**: Sensitive data is stored securely in Firebase Firestore.
-3. **Encryption**: Data is encrypted using AES before being stored.
-4. **Role-Based Access**: Teachers and admins have specific roles and permissions.
-
----
-
-## Getting Started
-
-1. Clone the repository:  
    ```bash
-   git clone https://github.com/Circuit-Overtime/Cypher-3.0.git
+   git clone https://github.com/elixpo/cypher.git
+   cd cypher
    ```
-2. Install dependencies for backend scripts:
+
+2. Install the dependencies used by the development utilities:
+
    ```bash
    npm install
    ```
-3. Set up Firebase credentials:
-   - Add your Firebase configuration in the respective files (`scanning.py`, `teacher.js`, `admin.js`, `upload_admins.js`).
-   - Ensure the `serviceAccountKey.json` file is correctly placed for Firebase Admin SDK.
 
-4. Run the application:
-   - For backend scripts, execute them using Node.js or Python as required.
-   - For the frontend, open `index.html` in your browser.
+3. Configure a development Firebase project. Never commit service-account
+   credentials or production secrets.
 
----
+4. Run the relevant Node.js or Python utility, or serve the browser application
+   with a local static web server.
 
-## Feedback and Contributions
+The repository does not yet publish a stable setup or release contract. The
+development roadmap will replace these prototype instructions as the core
+product is rebuilt.
 
-We welcome contributions to improve Safe Cypher! Feel free to fork the repository, make changes, and submit a pull request. For any issues, please open a ticket in the [Issues](https://github.com/Circuit-Overtime/Cypher-3.0/issues) section.
+## Contributing
 
-Thank you for being a part of the Safe Cypher journey!
+Read [CONTRIBUTING.md](CONTRIBUTING.md), the
+[Code of Conduct](CODE_OF_CONDUCT.md), and [SECURITY.md](SECURITY.md) before
+opening a change. Use [GitHub issues](https://github.com/elixpo/cypher/issues)
+for reproducible defects and scoped proposals. Report vulnerabilities only
+through the private route documented in `SECURITY.md`.
+
+## Contributors
+
+<a href="https://github.com/elixpo/cypher/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=elixpo/cypher" alt="Contributors to Cypher" />
+</a>
+
+Cypher retains its complete Git history and contributor attribution through the
+repository rename.

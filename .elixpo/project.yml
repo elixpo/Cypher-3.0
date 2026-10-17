@@ -1,21 +1,22 @@
 schema_version: '1.0'
 project:
-  id: cypher-3
-  name: Cypher-3.0
-  title: Cypher 3.0
-  description: An earlier project retained for maintenance and targeted upgrades.
+  id: cypher
+  name: cypher
+  title: Cypher
+  description: An incubating core Elixpo application preparing for active product development.
   family: project
   artifact_type: application
-  profile: maintenance-software
+  profile: incubating-software
   technologies:
   - Python
-  - browser automation
+  - Firebase
+  - web application
   chapter_status: null
-  lifecycle: maintenance
+  lifecycle: incubating
   relationship: core
   custody: elixpo-owned
-  stack: maintenance-software
-  repository: https://github.com/elixpo/Cypher-3.0
+  stack: incubating-software
+  repository: https://github.com/elixpo/cypher
   deployment: null
   discussions: https://github.com/orgs/elixpo/discussions
   status_owner: elixpo
@@ -23,17 +24,17 @@ project:
 publication:
   public: true
   featured: false
-  canonical_slug: cypher-3
-  canonical_url: https://elixpo.com/projects/cypher-3
+  canonical_slug: cypher
+  canonical_url: https://elixpo.com/projects/cypher
 provenance:
   classification_decision: https://github.com/elixpo/elixpo/blob/main/docs/governance/repository-classification-decisions.md
   license_evidence: https://github.com/elixpo/elixpo/blob/main/content/repository-licenses.json
   status_checked_at: '2026-10-17'
 license:
-  current_file: null
+  current_file: LICENSE
   notice_file: null
-  migration_status: review-required
-  target_code_license: not-designated
+  migration_status: current
+  target_code_license: MIT
   trademark_policy: https://elixpo.com/terms
 ci:
   lint_cmd: ''
@@ -43,7 +44,8 @@ maintainers:
 - github: Circuit-Overtime
   skills:
   - Python
-  - browser automation
+  - Firebase
+  - web application
   lead: true
 governance:
   model: maintainer-led
@@ -54,11 +56,6 @@ security:
   document: SECURITY.md
 conformance:
   standard: '1.0'
-  status: conformant-with-exceptions
+  status: conformant
   assessed_at: '2026-10-17'
-  exceptions:
-  - id: license-missing
-    reason: No repository license is currently published; reuse permission must not
-      be inferred until maintainer review is complete.
-    owner: Circuit-Overtime
-    review_at: '2027-01-17'
+  exceptions: []
